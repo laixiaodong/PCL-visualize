@@ -1,0 +1,15 @@
+<RCC>
+  <qresource prefix="/PCLVisualizer">
+    <file>Resources/image/10.jpg</file>
+    <file>Resources/image/9.jpg</file>
+    <file>Resources/image/1.png</file>
+    <file>Resources/image/2.png</file>
+    <file>Resources/image/3.png</file>
+    <file>Resources/image/4.png</file>
+    <file>Resources/image/11.jpg</file>
+    <file>Resources/image/5.png</file>
+    <file>Resources/image/6.png</file>
+    <file>Resources/image/7.png</file>
+    <file>Resources/image/8.jpg</file>
+  </qresource>
+</RCC>

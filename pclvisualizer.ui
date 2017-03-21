@@ -1,0 +1,370 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>PCLVisualizerClass</class>
+ <widget class="QMainWindow" name="PCLVisualizerClass">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>737</width>
+    <height>626</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>盾构管片拼装质量数字化检测系统</string>
+  </property>
+  <property name="windowIcon">
+   <iconset resource="pclvisualizer.qrc">
+    <normaloff>:/PCLVisualizer/Resources/image/8.jpg</normaloff>:/PCLVisualizer/Resources/image/8.jpg</iconset>
+  </property>
+  <widget class="QWidget" name="centralWidget">
+   <layout class="QGridLayout" name="gridLayout_3">
+    <item row="0" column="0">
+     <widget class="QSplitter" name="splitter_2">
+      <property name="orientation">
+       <enum>Qt::Horizontal</enum>
+      </property>
+      <widget class="QSplitter" name="splitter">
+       <property name="orientation">
+        <enum>Qt::Vertical</enum>
+       </property>
+       <widget class="QLabel" name="label">
+        <property name="maximumSize">
+         <size>
+          <width>200</width>
+          <height>20</height>
+         </size>
+        </property>
+        <property name="text">
+         <string>运行状态</string>
+        </property>
+       </widget>
+       <widget class="QTextEdit" name="textEdit_1">
+        <property name="enabled">
+         <bool>true</bool>
+        </property>
+        <property name="minimumSize">
+         <size>
+          <width>250</width>
+          <height>200</height>
+         </size>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>250</width>
+          <height>300</height>
+         </size>
+        </property>
+        <property name="readOnly">
+         <bool>true</bool>
+        </property>
+       </widget>
+       <widget class="QLabel" name="label_2">
+        <property name="maximumSize">
+         <size>
+          <width>200</width>
+          <height>20</height>
+         </size>
+        </property>
+        <property name="text">
+         <string>计算结果</string>
+        </property>
+       </widget>
+       <widget class="QTextEdit" name="textEdit_2">
+        <property name="enabled">
+         <bool>true</bool>
+        </property>
+        <property name="minimumSize">
+         <size>
+          <width>250</width>
+          <height>200</height>
+         </size>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>250</width>
+          <height>600</height>
+         </size>
+        </property>
+        <property name="readOnly">
+         <bool>true</bool>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="Out">
+        <property name="maximumSize">
+         <size>
+          <width>100</width>
+          <height>20</height>
+         </size>
+        </property>
+        <property name="text">
+         <string>查看详细结果</string>
+        </property>
+       </widget>
+      </widget>
+      <widget class="QVTKWidget" name="qvtkWidget">
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+      </widget>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menuBar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>737</width>
+     <height>23</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuFILE">
+    <property name="title">
+     <string>文件</string>
+    </property>
+    <addaction name="actionOPEN"/>
+    <addaction name="actionEXIT"/>
+   </widget>
+   <widget class="QMenu" name="menu">
+    <property name="title">
+     <string>计算</string>
+    </property>
+    <addaction name="actionCACULATE"/>
+   </widget>
+   <widget class="QMenu" name="menu_2">
+    <property name="title">
+     <string>帮助</string>
+    </property>
+    <addaction name="actionDesign"/>
+    <addaction name="actionExplain"/>
+    <addaction name="actionRegister"/>
+   </widget>
+   <addaction name="menuFILE"/>
+   <addaction name="menu"/>
+   <addaction name="menu_2"/>
+  </widget>
+  <action name="actionOPEN">
+   <property name="icon">
+    <iconset resource="pclvisualizer.qrc">
+     <normaloff>:/PCLVisualizer/Resources/image/1.png</normaloff>:/PCLVisualizer/Resources/image/1.png</iconset>
+   </property>
+   <property name="text">
+    <string>打开</string>
+   </property>
+  </action>
+  <action name="actionSAVE">
+   <property name="icon">
+    <iconset resource="pclvisualizer.qrc">
+     <normaloff>:/PCLVisualizer/Resources/image/2.png</normaloff>:/PCLVisualizer/Resources/image/2.png</iconset>
+   </property>
+   <property name="text">
+    <string>计算</string>
+   </property>
+  </action>
+  <action name="actionEXIT">
+   <property name="icon">
+    <iconset resource="pclvisualizer.qrc">
+     <normaloff>:/PCLVisualizer/Resources/image/3.png</normaloff>:/PCLVisualizer/Resources/image/3.png</iconset>
+   </property>
+   <property name="text">
+    <string>退出</string>
+   </property>
+  </action>
+  <action name="actionHuanni">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="pclvisualizer.qrc">
+     <normaloff>:/PCLVisualizer/Resources/image/4.png</normaloff>:/PCLVisualizer/Resources/image/4.png</iconset>
+   </property>
+   <property name="text">
+    <string>环内错台值计算</string>
+   </property>
+  </action>
+  <action name="actionHuanjian">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="pclvisualizer.qrc">
+     <normaloff>:/PCLVisualizer/Resources/image/5.png</normaloff>:/PCLVisualizer/Resources/image/5.png</iconset>
+   </property>
+   <property name="text">
+    <string>环间错台值计算</string>
+   </property>
+  </action>
+  <action name="actionTuiyuandu">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="pclvisualizer.qrc">
+     <normaloff>:/PCLVisualizer/Resources/image/6.png</normaloff>:/PCLVisualizer/Resources/image/6.png</iconset>
+   </property>
+   <property name="text">
+    <string>椭圆度计算</string>
+   </property>
+  </action>
+  <action name="actionDesign">
+   <property name="enabled">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="pclvisualizer.qrc">
+     <normaloff>:/PCLVisualizer/Resources/image/10.jpg</normaloff>:/PCLVisualizer/Resources/image/10.jpg</iconset>
+   </property>
+   <property name="text">
+    <string>开发信息</string>
+   </property>
+  </action>
+  <action name="actionFushi">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="text">
+    <string>俯视</string>
+   </property>
+  </action>
+  <action name="actionQianshi">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="text">
+    <string>前视</string>
+   </property>
+  </action>
+  <action name="actionZuoshi">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="text">
+    <string>左视</string>
+   </property>
+  </action>
+  <action name="actionYoushi">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="text">
+    <string>右视</string>
+   </property>
+  </action>
+  <action name="actionHoushi">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="text">
+    <string>后视</string>
+   </property>
+  </action>
+  <action name="actionYangshi">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="text">
+    <string>仰视</string>
+   </property>
+  </action>
+  <action name="actionThin">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="text">
+    <string>点云稀疏</string>
+   </property>
+  </action>
+  <action name="actionDenoise">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="text">
+    <string>点云除杂</string>
+   </property>
+  </action>
+  <action name="actionX">
+   <property name="text">
+    <string>X</string>
+   </property>
+  </action>
+  <action name="actionX_2">
+   <property name="text">
+    <string>X</string>
+   </property>
+  </action>
+  <action name="actionX_3">
+   <property name="text">
+    <string>Z</string>
+   </property>
+  </action>
+  <action name="actionX_4">
+   <property name="text">
+    <string>X向(原始扫描方向)</string>
+   </property>
+  </action>
+  <action name="actionY">
+   <property name="text">
+    <string>Y向(原始扫描方向)</string>
+   </property>
+  </action>
+  <action name="actionZ">
+   <property name="text">
+    <string>Z向(原始扫描方向)</string>
+   </property>
+  </action>
+  <action name="actionQing">
+   <property name="text">
+    <string>qing</string>
+   </property>
+  </action>
+  <action name="actionPppppppppp">
+   <property name="text">
+    <string>pppppppppp</string>
+   </property>
+  </action>
+  <action name="actionExplain">
+   <property name="icon">
+    <iconset resource="pclvisualizer.qrc">
+     <normaloff>:/PCLVisualizer/Resources/image/7.png</normaloff>:/PCLVisualizer/Resources/image/7.png</iconset>
+   </property>
+   <property name="text">
+    <string>系统说明</string>
+   </property>
+  </action>
+  <action name="actionCACULATE">
+   <property name="icon">
+    <iconset resource="pclvisualizer.qrc">
+     <normaloff>:/PCLVisualizer/Resources/image/9.jpg</normaloff>:/PCLVisualizer/Resources/image/9.jpg</iconset>
+   </property>
+   <property name="text">
+    <string>一键计算</string>
+   </property>
+  </action>
+  <action name="actionRegister">
+   <property name="icon">
+    <iconset resource="pclvisualizer.qrc">
+     <normaloff>:/PCLVisualizer/Resources/image/11.jpg</normaloff>:/PCLVisualizer/Resources/image/11.jpg</iconset>
+   </property>
+   <property name="text">
+    <string>register</string>
+   </property>
+  </action>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <customwidgets>
+  <customwidget>
+   <class>QVTKWidget</class>
+   <extends>QWidget</extends>
+   <header>QVTKWidget.h</header>
+  </customwidget>
+ </customwidgets>
+ <resources>
+  <include location="pclvisualizer.qrc"/>
+ </resources>
+ <connections/>
+</ui>
